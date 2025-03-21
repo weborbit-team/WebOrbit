@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
+// this is navbar
 const Page = () => {
   const [isDark, setIsDark] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
