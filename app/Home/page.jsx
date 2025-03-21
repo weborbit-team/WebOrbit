@@ -7,6 +7,7 @@ import { Pointer } from "@/components/magicui/pointer";
 import { ShineBorder } from "@/components/magicui/Implemented/implementShineBorder";
 import { motion, AnimatePresence } from "framer-motion";
 
+// this is home page
 const page = () => {
   const faqData = [
     {
