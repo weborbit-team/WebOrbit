@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Icons from "@/src/components/icons";
+import Icons from "@/src/components/client-components/Icons/icons"
 
 // this is home page
 const page = () => {
