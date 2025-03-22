@@ -1,6 +1,8 @@
-import { cn } from "@/lib/utils";
-import { Marquee } from "@/components/magicui/marquee";
+'use client'
+import { cn } from "@/src/lib/utils";
+import { Marquee } from "@/src/components/magicui/marquee";
 import { useTheme } from 'next-themes' // Add this import
+import { useState, useEffect } from "react";
 
 const reviews = [
   {
@@ -72,7 +74,13 @@ const ReviewCard = ({
   lightThemeColor: string;
 }) => {
   const { theme } = useTheme();
-  const currentColor = theme === 'light' ? lightThemeColor : color;
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; // Prevent rendering until mounted
+  const currentColor = theme === "light" ? lightThemeColor : color;
 
   return (
     <figure
@@ -84,19 +92,17 @@ const ReviewCard = ({
         "dark:border-gray-50/[.1] dark:hover:bg-gray-50/[.15] dark:text-white"
       )}
       style={{
-        background: `linear-gradient(to right, ${currentColor}${theme === 'dark' ? '' : '70'}, ${currentColor}${theme === 'dark' ? '95' : '95'})`,
+        background: `linear-gradient(to right, 
+    ${currentColor}${theme === "dark" ? "CC" : "80"}, 
+    ${currentColor}${theme === "dark" ? "FF" : "B3"})`,
         borderColor: currentColor,
       }}
     >
       <div className="flex flex-row items-center gap-2">
         <img className="rounded-full" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium opacity-60">
-            {username}
-          </p>
+          <figcaption className="text-sm font-medium">{name}</figcaption>
+          <p className="text-xs font-medium opacity-60">{username}</p>
         </div>
       </div>
       <blockquote className="mt-2 text-sm">{body}</blockquote>
@@ -125,8 +131,8 @@ export function MarqueeDemo() {
           />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-light dark:from-dark"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-light dark:from-dark"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r  dark:from-dark"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l  dark:from-dark"></div>
     </div>
   );
 }

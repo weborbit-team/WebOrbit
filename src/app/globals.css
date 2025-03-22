@@ -44,16 +44,18 @@
 
  /* Full Website Color Palette with Simple Names (No Repeats) */
  --color-dark: #0e0e0e;        /* Used: Dark base for nav background (bg-nav-bg-dark, nav-dark), button background (bg-nav-bg-dark), and text (text-text-light, nav-text-light) */
+ --color-light-dark: #171616;    
+ --color-light-border: #2d2c2c;    
  --color-light: #fff;       /* Used: Light base for main background (bg-background-light, bg-light), nav background (bg-nav-bg-light, nav-light), and text (text-nav-text-dark, text-nav-bg-light) */
  --color-purple: #8319c4;      /* Used: Purple accent for dark mode buttons (dark:bg-nav-accent-dark, nav-accent) */
  --color-deep-blue: #340385;   /* Used: Deep blue for dark mode toggle background (dark:bg-nav-toggle-bg-dark, toggle-bg-dark) and button accent (dark:bg-nav-accent-dark, accent-dark) */
  --color-soft-pink: #e264ff;   /* Available: Soft pink for future accents */
  --color-mid-gray: #6c6c6c;    /* Used: Medium gray for dark mode toggle button (dark:before:bg-nav-toggle-button-dark, toggle-dark) */
  --color-pale-gray: #aeaeae;   /* Used: Pale gray for light mode toggle background (bg-nav-toggle-bg-light, toggle-bg-light) and dark mode text (dark:text-text-dark, text-dark) */
- --color-rose: #bb1f6d;        /* Available: Rose pink for future emphasis */
+ --color-pink: rgb(255 76 226);        /* Available: Rose pink for future emphasis */
  --color-sky-blue: #6285ed;    /* Used: Sky blue for light mode toggle button (before:bg-nav-toggle-button-light, toggle-light) */
  --color-bright-orange: #fe4401; /* Available: Bright orange for future calls-to-action */
- --color-pink: #d765f1;        /* Used: Pink for button hover (hover:bg-hover-primary, dark:hover:bg-hover-primary, hover) */
+ /* --color-pink: #d765f1;        Used: Pink for button hover (hover:bg-hover-primary, dark:hover:bg-hover-primary, hover) */
 
 
  --color-charcoal: #161515;    /* Dark charcoal for FAQ background */
@@ -178,5 +180,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn-general {
+    @apply px-6 py-3 rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark hover:bg-pink dark:hover:bg-pink hover:text-black font-semibold dark:hover:text-white;
   }
 }
