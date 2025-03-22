@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 # WebOrbit Website folder structure
 ```
 .
+.
 ├── public
 └── src/
     ├── app/
@@ -56,8 +57,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
     │   ├── not-found.js //404 error page
     │   └── page.js //this is the default home page
     ├── components //for reusable components/
+    │   ├── client-components //render client side components here/
+    │   │   └── Theme //next-theme intigration/
+    │   │       ├── ThemeProvider.js //provide theme
+    │   │       └── ThemeToggel.js //toggel button for theme 
     │   ├── magicui
     │   └── acernityui
-    ├── lib //for helpers api
+    ├── lib //for helpers api/
+    │   └── utils.js //for shadcon ui
     └── utils //for utility file that reuse
 ```
