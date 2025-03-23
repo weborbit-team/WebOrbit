@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Icons from "@/src/components/client-components/Icons/icons";
 
-// this is home page
+// this is home page of weborbit
 const page = () => {
   return (
     <>
