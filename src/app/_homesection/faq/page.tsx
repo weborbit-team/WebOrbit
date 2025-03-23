@@ -1,39 +1,41 @@
 'use client'
 import React, { useState } from "react";
+// import { Image } from "next/image";
 // import { MarqueeDemo } from "@/src/components/magicui/Implemented/implementMarquee";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const faqData = [
   {
     id: 1,
     question: "What services do you offer in web development?",
     answer:
-      "We offer full-stack web development services including custom website design, e-commerce solutions, progressive web apps (PWAs), CMS development, and API integration. Our tech stack includes React, Next.js, Node.js, and other modern technologies.",
+      "We provide full-stack web development, including custom designs, e-commerce, PWAs, CMS, and API integration using React, Next.js, and Node.js.",
   },
   {
     id: 2,
     question: "How long does it typically take to develop a mobile app?",
     answer:
-      "The development timeline varies based on complexity. A basic app might take 3-4 months, while complex applications can take 6-12 months. We follow an agile methodology to ensure regular deliverables and updates throughout the development process.",
+      "Basic apps take 3-4 months; complex ones take 6-12 months, using an agile approach.",
   },
   {
     id: 3,
     question:
       "Do you provide maintenance and support after project completion?",
     answer:
-      "Yes, we offer comprehensive post-launch support and maintenance packages. This includes bug fixes, security updates, performance optimization, and feature enhancements to keep your application running smoothly.",
+      "Yes, we offer support packages with bug fixes, updates, and enhancements.",
   },
   {
     id: 4,
     question: "What's your approach to UI/UX design?",
     answer:
-      "We follow a user-centered design approach, starting with research and wireframing, moving to interactive prototypes, and finishing with polished designs. We ensure all interfaces are intuitive, responsive, and accessible.",
+      "We use a user-centered process with research, wireframes, prototypes, and responsive designs.",
   },
   {
     id: 5,
     question: "How do you handle project pricing?",
     answer:
-      "Our pricing is project-based and depends on factors like scope, complexity, and timeline. We provide detailed estimates after thorough requirement analysis and offer flexible engagement models including fixed price and time & material.",
+      "Pricing varies by scope and complexity; we offer fixed-price or time & material estimates after analysis.",
   },
 ];
 
@@ -44,15 +46,17 @@ const [activeIndex, setActiveIndex] = useState<number | null>(null);
     <>
       {/* FAQ */}
       <div className="w-full flex flex-col lg:flex-row items-center md:items-start justify-center gap-8 min-h-screen px-4 py-16 ">
-        <div className="w-full lg:w-[25%] flex flex-col items-center justify-center sticky top-20 lg:ml-10">
+        <div className="w-full lg:w-[25%] flex flex-col items-center justify-center lg:mb-34 sticky top-20 lg:ml-10">
           <h1 className="text-3xl text-center md:text-5xl font-bold mb-2 text-dark dark:text-light">
             Frequently asked questions
           </h1>
-          <img
+          <Image
             src="/homeSvg/drawing4.svg"
-            alt=""
-            className="
-    left-2  
+            alt="Hero illustration"
+            width={230}
+            height={230}
+            priority
+            className="left-2  
     xs:left-4 xs:top-[20rem] 
     sm:left-6 sm:top-[25rem] 
     md:left-8 md:top-[30rem] 
@@ -76,13 +80,13 @@ const [activeIndex, setActiveIndex] = useState<number | null>(null);
                               backdrop-blur-sm"
               >
                 <button
-                  className="w-full px-12 py-5 text-left flex justify-between items-center
+                  className="w-full px-4 md:px-12 py-5 text-left flex justify-between items-center
                              transition-all duration-300"
                   onClick={() =>
                     setActiveIndex(activeIndex === index ? null : index)
                   }
                 >
-                  <span className="font-bold text-xl md:text-2xl text-dark dark:text-light">
+                  <span className="font-bold text-lg md:text-2xl text-dark dark:text-light">
                     {faq.question}
                   </span>
                   <motion.span
@@ -127,10 +131,10 @@ const [activeIndex, setActiveIndex] = useState<number | null>(null);
                         animate={{ y: 0 }}
                         exit={{ y: -20 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="px-12 pb-10 "
+                        className="px-4 md:px-12 pb-10 "
                       >
                         <p
-                          className="text-md md:text-xl text-dark dark:text-light
+                          className="text-sm md:text-xl text-dark dark:text-light
                                     leading-relaxed"
                         >
                           {faq.answer}
