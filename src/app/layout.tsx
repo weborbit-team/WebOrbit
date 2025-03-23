@@ -3,11 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/src/components/client-components/Theme/ThemeProvider";
 import Navbar from "@/src/components/main-components/navbar/page";
-// import Footer from "@/src/components/main-components/footer/page";
-
-
-// Error Boundary Component (optional)
-// import ErrorBoundary from "@/src/components/ErrorBoundary";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Awesome App", // More specific title
-  description: "A modern web application built with Next.js",
+  title: "WebOrbit - Fast, Affordable Web, Apps, Games & AI",
+  description:
+    "WebOrbit offers fast, affordable websites (MERN/Next.js), apps, Unity games, and AI solutions by an experienced team of four.",
+  openGraph: {
+    title: "WebOrbit - Digital Solutions",
+    description:
+      "Fast, affordable websites, apps, games, and AI by WebOrbit’s expert team.",
+    // images: ["/og-image.jpg"],
+  },
   icons: {
-    icon: "/favicon.ico", // Add favicon
+    icon: "/favicon.ico",
   },
 };
 
