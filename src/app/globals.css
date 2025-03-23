@@ -188,3 +188,8 @@
     @apply px-6 py-3 rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark hover:bg-pink dark:hover:bg-pink hover:text-black font-semibold dark:hover:text-white;
   }
 }
+@layer components {
+  .btn-general-mobile {
+    @apply px-4 py-2 text-base rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark hover:bg-pink dark:hover:bg-pink hover:text-black font-semibold dark:hover:text-white;
+  }
+}

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/src/components/client-components/Theme/ThemeProvider";
 import Navbar from "@/src/components/main-components/navbar/page";
+// import Footer from "@/src/components/main-components/footer/page";
 
 
 // Error Boundary Component (optional)
@@ -39,6 +40,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           {children}
+          {/* <Footer/> */}
         </ThemeProvider>
       </body>
     </html>

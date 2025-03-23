@@ -3,10 +3,12 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "@/src/components/client-components/Theme/ThemeToggle";
+import Image from "next/image";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [mounted, setMounted] = useState<boolean>(false);
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const pathname = usePathname(); // Get current route
 
@@ -14,11 +16,20 @@ const Navbar: React.FC = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
 
-  const toggleTheme = (): void => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
+
+  if (!mounted) return null;
 
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev);
@@ -40,21 +51,28 @@ const Navbar: React.FC = () => {
       {/* Desktop Navigation */}
       <div className="hidden lg:flex items-center justify-between px-8 h-[5rem]">
         <div className="flex items-center">
-          <img src="../favicon.ico" alt="logo" className="h-10" />
+          <Image
+            src="/favicon.ico"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </div>
 
         <div className="flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-          <a
+          <Link
             href="/"
             className={`px-2 py-1 hover:text-soft-pink dark:hover:text-pink font-medium ${
               isActive("Home") ? "text-pink-500" : ""
             }`}
           >
             Home
-          </a>
+          </Link>
 
           {["About Us", "Blog", "Services", "Contact Us"].map((item) => (
-            <a
+            <Link
               key={item}
               href={`/${item.toLowerCase().replace(/\s+/g, "")}`}
               className={`px-2 py-1 hover:text-soft-pink dark:hover:text-pink font-medium ${
@@ -62,12 +80,12 @@ const Navbar: React.FC = () => {
               }`}
             >
               {item}
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="flex items-center gap-4">
-          <ThemeToggle /> {/* Desktop toggle */}
+          <ThemeToggle isMobile={false} /> {/* Explicitly set desktop */}
           <button className="btn-general">Get Started &gt;&gt;</button>
         </div>
       </div>
@@ -82,18 +100,26 @@ const Navbar: React.FC = () => {
           {isMenuOpen ? "✕" : "☰"}
         </button>
         <div>
-          <img src="../favicon.ico" alt="logo" className="h-8" />
+          <Image
+            src="/favicon.ico"
+            alt="Logo"
+            width={32}
+            height={32}
+            className="h-8 w-auto"
+            priority
+          />
         </div>
-        <ThemeToggle /> {/* mobile toggle */}
+        <ThemeToggle isMobile={true} /> {/* Pass true for mobile */}
       </div>
 
       {isMenuOpen && (
         <div
-          className="lg:hidden fixed inset-0 bg-light dark:bg-dark z-40"
+          className="lg:hidden fixed inset-0 backdrop-blur-md bg-light/80 dark:bg-dark/80 z-40 
+          transition-all duration-300 ease-in-out overflow-hidden"
           style={{ top: "4rem" }}
         >
           <div className="flex flex-col items-center justify-center h-full gap-8 text-xl">
-            <a
+            <Link
               className={`px-2 py-1 hover:text-nav-hover ${
                 isActive("Home") ? "text-pink-500" : ""
               }`}
@@ -101,10 +127,10 @@ const Navbar: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Home
-            </a>
+            </Link>
 
             {["About Us", "Blog", "Services", "Contact Us"].map((item) => (
-              <a
+              <Link
                 key={item}
                 href={`/${item.toLowerCase().replace(/\s+/g, "")}`}
                 className={`px-2 py-1 hover:text-nav-hover ${
@@ -113,8 +139,11 @@ const Navbar: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}
-              </a>
+              </Link>
             ))}
+            <button className=" btn-general-mobile ">
+              Get Started &gt;&gt;
+            </button>
           </div>
         </div>
       )}
