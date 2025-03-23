@@ -2,9 +2,9 @@ import React from "react";
 import { ReactNode } from "react";
 
 export const metadata = {
-  title: "About Us | WebOrbit - Expert Team & Creative Solutions",
+  title: "Contact Us | WebOrbit - Affordable Digital Solutions",
   description:
-    "Meet WebOrbit’s experienced team of four—frontend/backend devs (MERN/Next.js), a Unity game dev, and an AI expert—delivering fast, creative digital solutions.",
+    "Contact WebOrbit for fast, affordable websites (MERN/Next.js), apps, Unity games, or AI solutions from our experienced four-person team.",
 };
 
 const Layout = ({ children }: { children: ReactNode }) => {
