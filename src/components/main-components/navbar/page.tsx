@@ -5,12 +5,14 @@ import { usePathname } from "next/navigation";
 import ThemeToggle from "@/src/components/client-components/Theme/ThemeToggle";
 import Image from "next/image";
 import Link from "next/link";
+import { useError } from "@/src/components/client-components/error/ErrorContext"
 
 const Navbar: React.FC = () => {
   const [mounted, setMounted] = useState<boolean>(false);
   const { theme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const pathname = usePathname(); // Get current route
+  const { isError } = useError();
 
   useEffect(() => {
     setMounted(true);
@@ -30,6 +32,9 @@ const Navbar: React.FC = () => {
   }, [isMenuOpen]);
 
   if (!mounted) return null;
+
+  // Don't render navbar if we're on an error page
+  if (isError) return null;
 
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev);
@@ -65,7 +70,7 @@ const Navbar: React.FC = () => {
           <Link
             href="/"
             className={`px-2 py-1 hover:text-soft-pink dark:hover:text-pink font-medium ${
-              isActive("Home") ? "text-pink-500" : ""
+              isActive("Home") ? "text-pink" : ""
             }`}
           >
             Home
@@ -76,7 +81,7 @@ const Navbar: React.FC = () => {
               key={item}
               href={`/${item.toLowerCase().replace(/\s+/g, "")}`}
               className={`px-2 py-1 hover:text-soft-pink dark:hover:text-pink font-medium ${
-                isActive(item) ? "text-pink-500" : ""
+                isActive(item) ? "text-pink" : ""
               }`}
             >
               {item}
