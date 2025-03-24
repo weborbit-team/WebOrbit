@@ -83,7 +83,7 @@ const NotFound = () => {
             className="relative"
           >
             <Image
-              src="/notfound/robot.png"
+              src="/not_found/robot.png"
               alt="Confused Robot"
               width={400}
               height={400}
