@@ -222,3 +222,12 @@
     @apply px-4 py-2 text-base rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark hover:bg-pink dark:hover:bg-pink hover:text-black font-semibold dark:hover:text-white;
   }
 }
+
+@layer utilities {
+  .glow-on-hover {
+    transition: filter 300ms ease-in-out;
+  }
+  .glow-on-hover:hover {
+    filter: drop-shadow(0 0 30px rgba(255,255,255,0.5)) drop-shadow(0 0 80px rgba(255,255,255,0.3));
+  }
+}
