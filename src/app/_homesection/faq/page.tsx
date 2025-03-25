@@ -91,7 +91,7 @@ const [activeIndex, setActiveIndex] = useState<number | null>(null);
                   </span>
                   <motion.span
                     animate={{
-                      rotate: activeIndex === index ? 0 : 180,
+                      rotate: activeIndex === index ? 180 : 0,
                     }}
                     transition={{
                       duration: 0.2,
