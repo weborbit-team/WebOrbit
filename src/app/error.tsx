@@ -63,7 +63,7 @@ const ErrorPage = ({ statusCode }: { statusCode?: number }) => {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
             <Image
-              src="/notfound/robot.png"
+              src="/not_found/robot.png"
               alt="Error Robot"
               width={400}
               height={400}

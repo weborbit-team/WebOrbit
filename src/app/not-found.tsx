@@ -83,7 +83,7 @@ const NotFound = () => {
             className="relative"
           >
             <Image
-              src="/notfound/robot.png"
+              src="/not_found/robot.png"
               alt="Confused Robot"
               width={400}
               height={400}
@@ -169,7 +169,7 @@ const NotFound = () => {
               Page Not Found
             </h2>
             <p className="text-sm md:text-base text-[var(--color-404-text-secondary)] max-w-md mx-auto">
-              The page you're looking for doesn't exist or has been moved.
+              The page you&apos;re looking for doesn&apos;t exist or has been moved.
               Please check the URL or navigate back to the homepage.
             </p>
           </motion.div>
