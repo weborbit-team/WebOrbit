@@ -44,7 +44,7 @@
 
   /* Full Website Color Palette with Simple Names (No Repeats) */
   --color-dark: #0e0e0e; /* Used: Dark base for nav background (bg-nav-bg-dark, nav-dark), button background (bg-nav-bg-dark), and text (text-text-light, nav-text-light) */
-  --color-light-dark: #171616;
+  --color-light-dark: #171616; 
   --color-light-border: #2d2c2c;
   --color-light: #fff; /* Used: Light base for main background (bg-background-light, bg-light), nav background (bg-nav-bg-light, nav-light), and text (text-nav-text-dark, text-nav-bg-light) */
   --color-purple: #8319c4; /* Used: Purple accent for dark mode buttons (dark:bg-nav-accent-dark, nav-accent) */
