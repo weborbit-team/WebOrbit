@@ -41,35 +41,6 @@ const page = () => {
             transition-all duration-300"
         />
         <div className="flex flex-col items-center justify-center gap-3 md:gap-4 px-4 py-4 mb-20 md:py-6">
-          {/* <div className="flex items-center justify-center w-full">
-            <Image
-              src="/homeSvg/image1.svg"
-              alt="Hero illustration"
-              width={40}
-              height={40}
-              priority
-              className=" xs:w-[30px] sm:w-[40px] md:w-[50px] lg:w-[60px] xl:w-[70px] "
-            />
-          </div>
-          <div className="flex items-center justify-center gap-2">
-            <Image
-              src="/homeSvg/gitt.svg"
-              alt="GitHub icon"
-              width={25}
-              height={25}
-              className="w-5 h-5 md:w-[25px] md:h-[25px]"
-            />
-            <Image
-              src="/homeSvg/star.svg"
-              alt="Star icon"
-              width={25}
-              height={25}
-              className="w-5 h-5 md:w-[25px] md:h-[25px]"
-            />
-            <h1 className="text-xl md:text-2xl font-semibold mt-[5px] text-dark dark:text-white">
-              18.2K
-            </h1>
-          </div> */}
           <div className="max-w-5xl px-2 mt-2">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center max-w-3xl text-dark dark:text-white">
               Crafting Web Wonders & Gaming Glory, End-to-End!  
