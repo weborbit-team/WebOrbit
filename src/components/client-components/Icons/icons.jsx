@@ -309,7 +309,7 @@ const TechIconsDisplay = React.memo(() => {
   return (
     <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 sm:gap-3 p-3 max-w-4xl mx-auto">
       {Object.entries(TechIcons).map(([name, icon]) => (
-        <div key={name} className="flex flex-col items-center">
+        <div key={name} className="flex flex-col items-center glow-on-hover">
           <div className="w-8 h-8 sm:w-10 sm:h-10">
             {React.cloneElement(icon, {
               className: "w-full h-full object-contain",
