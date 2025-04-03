@@ -1,3 +1,4 @@
+"use client";
 import { Cookie } from "next/font/google";
 import React from "react";
 import Link from "next/link";
@@ -6,6 +7,7 @@ import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { useError } from "@/src/components/client-components/error/ErrorContext";
 
 const cookie = Cookie({
   weight: "400",
@@ -68,11 +70,15 @@ const footerLinks = [
     ],
   },
 ];
-
+// kk
 const page = () => {
+  const { isError } = useError();
+
+  // Don't render footer if we're on an error page
+  if (isError) return null;
   return (
     <>
-      <div className="bg-light-border/40 h-[40vh] rounded-tl-[6rem] rounded-tr-[6rem] flex flex-col items-center justify-center">
+      <div className="bg-light-border/40 h-[40vh] rounded-tl-[6rem] rounded-tr-[6rem] flex flex-col items-center justify-center mt-[5rem]">
         {/* CTA Section */}
         <div className="text-center max-w-3xl px-4 mt-20 sm:mt-80">
           <h1 className="text-4xl md:text-6xl font-bold text-dark dark:text-light mb-4">
@@ -107,8 +113,8 @@ const Footer = () => {
     <footer className="bg-white dark:bg-dark z-10 text-dark dark:text-white py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start">
         {/* Left Section */}
-        <div className="mb-8 md:mb-0">
-          <div className="flex items-center mb-4">
+        <div className="mb-8 md:mb-0 w-full md:w-auto text-center md:text-left">
+          <div className="flex items-center mb-4 justify-center md:justify-start">
             <Image
               src="/logo.png"
               alt="Logo"
@@ -117,7 +123,7 @@ const Footer = () => {
               className="mr-2"
             />
             <span
-              className={`${cookie.className}  text-3xl font-bold text-[var(--color-soft-pink)]`}
+              className={`${cookie.className} text-3xl font-bold text-[var(--color-soft-pink)]`}
             >
               Web Orbit
             </span>
@@ -125,7 +131,7 @@ const Footer = () => {
           <p className="text-[var(--color-pale-gray)]">
             Open-source social media scheduling tool
           </p>
-          <div className="flex space-x-4 mt-4">
+          <div className="flex space-x-4 mt-4 justify-center md:justify-start">
             {socialIcons.map((icon) => (
               <Link
                 key={icon.name}
@@ -145,10 +151,10 @@ const Footer = () => {
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full md:w-auto">
           {footerLinks.map((section) => (
-            <div key={section.title}>
-              <h3 className={` text-lg font-semibold mb-4 text-light`}>
+            <div key={section.title} className="text-center md:text-left">
+              <h3 className="text-lg font-semibold mb-4 text-light">
                 {section.title}
               </h3>
               <ul className="space-y-2">
@@ -170,7 +176,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="max-w-7xl mx-auto mt-10 flex flex-col md:flex-row justify-between items-center border-t border-[var(--color-light-border)] pt-6">
-        <div className="text-[var(--color-pale-gray)] text-sm mb-4 md:mb-0">
+        <div className="text-[var(--color-pale-gray)] text-sm mb-4 md:mb-0 text-center md:text-left w-full">
           <p>© Web Orbit, {new Date().getFullYear()}. All rights reserved. </p>
           <p className="mt-1">
             Proudly open-source{" "}
