@@ -1,9 +1,10 @@
 import React from 'react'
+import MaintenancePage from '../_maintenense/page'
 
 const page = () => {
   return (
     <div>
-      page of services
+      <MaintenancePage />
     </div>
   )
 }
