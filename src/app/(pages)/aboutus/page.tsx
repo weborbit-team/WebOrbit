@@ -1,7 +1,10 @@
 import React from "react";
+import MaintenancePage from "../_maintenense/page";
 
 function page() {
-  return <div>About Page</div>;
+  return <div>
+    <MaintenancePage />
+  </div>;
 }
 
 export default page;
