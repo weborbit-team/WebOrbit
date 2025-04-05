@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { FaCode, FaGamepad, FaPalette, FaPencilRuler, FaBullhorn, FaMobileAlt } from 'react-icons/fa';
 
 const Services = () => {
@@ -82,9 +83,9 @@ const Services = () => {
                 <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-muted-foreground flex-grow">{service.description}</p>
                 <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-sm font-medium bg-gradient-to-r from-pink to-violet-600 bg-clip-text text-transparent">
+                  <Link href="/services" className="text-sm cursor-pointer font-medium bg-gradient-to-r from-pink to-violet-600 bg-clip-text text-transparent">
                     Learn more →
-                  </span>
+                  </Link>
                 </div>
               </div>
               <div className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-pink to-violet-600" />
