@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/src/components/client-components/Theme/ThemePro
 import Navbar from "@/src/components/main-components/navbar/page";
 import Footer from "@/src/components/main-components/footer/page";
 import { ErrorProvider } from "@/src/components/client-components/error/ErrorContext";
+import NextTopLoader from 'nextjs-toploader';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,9 +44,12 @@ export default function RootLayout({
       >
         <ErrorProvider>
           <ThemeProvider>
+            <NextTopLoader
+            crawl={false} 
+            />
             <Navbar />
             {children}
-            <Footer/>
+            <Footer />
           </ThemeProvider>
         </ErrorProvider>
       </body>
