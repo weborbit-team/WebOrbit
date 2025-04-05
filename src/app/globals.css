@@ -43,52 +43,24 @@
   --radius-xl: calc(var(--radius) + 4px);
 
   /* Full Website Color Palette with Simple Names (No Repeats) */
-  --color-dark: #0e0e0e; /* Used: Dark base for nav background (bg-nav-bg-dark, nav-dark), button background (bg-nav-bg-dark), and text (text-text-light, nav-text-light) */
-  --color-light-dark: #171616; 
+  --color-dark: #0e0e0e;
+  --color-light-dark: #171616;
   --color-light-border: #2d2c2c;
-  --color-light: #fff; /* Used: Light base for main background (bg-background-light, bg-light), nav background (bg-nav-bg-light, nav-light), and text (text-nav-text-dark, text-nav-bg-light) */
-  --color-purple: #8319c4; /* Used: Purple accent for dark mode buttons (dark:bg-nav-accent-dark, nav-accent) */
-  --color-deep-blue: #340385; /* Used: Deep blue for dark mode toggle background (dark:bg-nav-toggle-bg-dark, toggle-bg-dark) and button accent (dark:bg-nav-accent-dark, accent-dark) */
-  --color-soft-pink: #e264ff; /* Available: Soft pink for future accents */
-  --color-mid-gray: #6c6c6c; /* Used: Medium gray for dark mode toggle button (dark:before:bg-nav-toggle-button-dark, toggle-dark) */
-  --color-pale-gray: #aeaeae; /* Used: Pale gray for light mode toggle background (bg-nav-toggle-bg-light, toggle-bg-light) and dark mode text (dark:text-text-dark, text-dark) */
-  --color-pink: rgb(255 76 226); /* Available: Rose pink for future emphasis */
-  --color-sky-blue: #6285ed; /* Used: Sky blue for light mode toggle button (before:bg-nav-toggle-button-light, toggle-light) */
-  --color-bright-orange: #fe4401; /* Available: Bright orange for future calls-to-action */
-  /* --color-pink: #d765f1;        Used: Pink for button hover (hover:bg-hover-primary, dark:hover:bg-hover-primary, hover) */
+  --color-light: #fff;
+  --color-purple: #8319c4;
+  --color-deep-blue: #340385;
+  --color-soft-pink: #e264ff;
+  --color-mid-gray: #6c6c6c;
+  --color-pale-gray: #aeaeae;
+  --color-pink: rgb(255 76 226);
+  --color-sky-blue: #6285ed;
+  --color-bright-orange: #fe4401;
+  /* --color-pink: #d765f1;      
 
   --color-charcoal: #161515; /* Dark charcoal for FAQ background */
   --color-gray-50: #f9fafb; /* Light gray for hover states */
   --color-gray-600: #4b5563; /* Medium gray for text */
   --color-gray-700: #374151;
-
-  /* /* Homepage Colors */
-  /* --color-background-light: #fefefe; /* Light background for main content in light mode (bg-background-light) - White */
-  /* --color-text-light: #0d0d0d;      /* Text color in light mode (text-text-light) - Black */
-  /* --color-text-dark: #aeaeae;       /* Text color in dark mode (dark:text-text-dark) - Light Gray */
-  /* 
-/* /* Shared Colors (Homepage and Navigation) */
-  /* --color-nav-bg-dark: #0d0d0d;     /* Background for buttons and nav in dark mode (bg-nav-bg-dark, dark:bg-nav-bg-dark) - Black */
-  /* --color-nav-bg-light: #fefefe;    /* Background for nav in light mode (bg-nav-bg-light), text in dark mode button (text-nav-bg-light) - White */
-  /* --color-nav-accent-dark: #340385; /* Background for buttons in dark mode (dark:bg-nav-accent-dark) - Dark Blue */
-  /* /*--color-hover-primary: #8319c4;   /* Hover background for buttons (hover:bg-hover-primary, dark:hover:bg-hover-primary) - Dark Purple */
-  /* 
-/* /* Navigation-Specific Colors */
-  /* --color-nav-bg-dark: #0d0d0d;     /* Background for nav and buttons in dark mode (bg-nav-bg-dark, dark:bg-nav-bg-dark) */
-  /* --color-nav-text-dark: #fefefe;   /* Text color for nav in dark mode (text-nav-text-dark) */
-  /* --color-nav-bg-light: #fefefe;    /* Background for nav in light mode (bg-nav-bg-light), text in dark mode button (text-nav-bg-light) */
-  /* --color-nav-text-light: #0d0d0d;  /* Text color for nav in light mode (text-nav-text-light) */
-  /* --color-nav-toggle-bg-light: #aeaeae; /* Background for theme toggle in light mode (bg-nav-toggle-bg-light) */
-  /* --color-nav-toggle-bg-dark: #340385;  /* Background for theme toggle in dark mode (dark:bg-nav-toggle-bg-dark) */
-  /* --color-nav-toggle-button-light: #6285ed; /* Toggle button circle in light mode (before:bg-nav-toggle-button-light) */
-  /* --color-nav-toggle-button-dark: #6c6c6c;  /* Toggle button circle in dark mode (dark:before:bg-nav-toggle-button-dark) */
-  /* --color-nav-accent-dark: #8319c4; /* Background for buttons in dark mode (dark:bg-nav-accent-dark) */
-  /* --color-hover-primary: #d765f1;   /* Hover background for buttons (hover:bg-hover-primary, dark:hover:bg-hover-primary) */
-  /* 
-/* /* Additional Palette Colors (Not Directly Used in Current Code) */
-  /* --color-pink-light: #e264ff;  /* Available for future use (e.g., accents or highlights) */
-  /* --color-pink-dark: #bb1f6d;   /* Available for future use (e.g., buttons or emphasis) */
-  /* --color-orange: #fe4401;      /* Available for future use (e.g., alerts or calls-to-action) */
 
   --animate-marquee: marquee var(--duration) linear infinite;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
@@ -111,53 +83,25 @@
 }
 
 :root {
+  /* Base Colors */
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
 
   /* 404 Page Theme Colors */
-  --color-404-bg-start: #0e0e0e;
-  --color-404-bg-mid: #171616;
-  --color-404-bg-end: #0e0e0e;
-  --color-404-text-primary: #6285ed;
-  --color-404-text-secondary: #aeaeae;
-  --color-404-accent: #340385;
+  --color-404-bg-start: var(--color-dark);
+  --color-404-bg-mid: var(--color-light-dark);
+  --color-404-bg-end: var(--color-dark);
+  --color-404-text-primary: var(--color-sky-blue);
+  --color-404-text-secondary: var(--color-pale-gray);
+  --color-404-accent: var(--color-deep-blue);
   --color-404-glow: rgba(98, 133, 237, 0.3);
   --color-404-border: rgba(98, 133, 237, 0.2);
 
   /* Error Page Theme Colors */
-  --color-error-primary: #ff4d4d;
+  --color-error-primary: #ff6b6b;
   --color-error-accent: #ff0000;
-  --color-error-text: #ffffff;
+  --color-error-text: var(--color-light);
   --color-error-glow: rgba(255, 0, 0, 0.3);
   --color-error-border: rgba(255, 0, 0, 0.2);
   --color-error-bg-start: #1a0000;
@@ -168,39 +112,12 @@
 .dark {
   --background: var(--color-dark);
   --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
 
   --color-404-bg-start: var(--color-dark);
   --color-404-bg-mid: var(--color-light-dark);
   --color-404-bg-end: var(--color-dark);
+  --color-404-text-primary: var(--color-sky-blue);
+  --color-404-text-secondary: var(--color-light);
 }
 
 @layer base {
@@ -214,12 +131,12 @@
 
 @layer components {
   .btn-general {
-    @apply px-6 py-3 rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark hover:bg-pink dark:hover:bg-pink hover:text-black font-semibold dark:hover:text-white;
+    @apply px-6 py-3 rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark hover:bg-pink dark:hover:bg-pink hover:text-black font-semibold dark:hover:text-white cursor-pointer;
   }
 }
 @layer components {
   .btn-general-mobile {
-    @apply px-4 py-2 text-base rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark hover:bg-pink dark:hover:bg-pink hover:text-black font-semibold dark:hover:text-white;
+    @apply px-4 py-2 text-base rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark hover:bg-pink dark:hover:bg-pink hover:text-black font-semibold dark:hover:text-white cursor-pointer;
   }
 }
 
