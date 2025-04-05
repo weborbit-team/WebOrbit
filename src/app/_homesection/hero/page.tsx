@@ -42,7 +42,7 @@ const page = () => {
         />
         <div className="flex flex-col items-center justify-center gap-3 md:gap-4 px-4 py-4 mb-20 md:py-6">
           <div className="max-w-5xl px-2 mt-2">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center max-w-3xl text-dark dark:text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center max-w-3xl lg:max-w-4xl text-dark dark:text-white">
               Crafting Web Wonders & Gaming Glory, End-to-End!  
             </h1>
             <Image
