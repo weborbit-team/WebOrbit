@@ -78,7 +78,7 @@ const FooterContainer = () => {
   if (isError) return null;
   return (
     <>
-      <div className="bg-light-border/40 h-[40vh] rounded-tl-[6rem] rounded-tr-[6rem] flex flex-col items-center justify-center mt-[5rem]">
+      <div className="bg-light-border/40 h-[5vh] rounded-tl-[6rem] rounded-tr-[6rem] flex flex-col items-center justify-center">
         {/* CTA Section */}
         <div className="text-center max-w-3xl px-4 mt-20 sm:mt-80">
           <h1 className="text-4xl md:text-6xl font-bold text-dark dark:text-light mb-4">
