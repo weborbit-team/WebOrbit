@@ -70,8 +70,8 @@ const footerLinks = [
     ],
   },
 ];
-// kk
-const page = () => {
+
+const FooterContainer = () => {
   const { isError } = useError();
 
   // Don't render footer if we're on an error page
@@ -188,4 +188,4 @@ const Footer = () => {
   );
 };
 
-export default page;
+export default FooterContainer;
