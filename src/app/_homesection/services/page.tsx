@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaCode, FaGamepad, FaPalette, FaPencilRuler, FaBullhorn } from 'react-icons/fa';
+import { FaCode, FaGamepad, FaPalette, FaPencilRuler, FaBullhorn, FaMobileAlt } from 'react-icons/fa';
 
 const Services = () => {
   const servicesData = [
@@ -38,6 +38,13 @@ const Services = () => {
       icon: <FaBullhorn className="w-8 h-8" />,
       color: "bg-gradient-to-br from-purple-500 to-indigo-600",
       size: "lg:col-span-2 lg:row-span-1", // Wide card
+    },
+    {
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile applications built with React Native and Flutter. We create responsive, fast, and user-friendly mobile experiences.",
+      icon: <FaMobileAlt className="w-8 h-8" />,
+      color: "bg-gradient-to-br from-yellow-400 to-orange-500",
+      size: "lg:col-span-1 lg:row-span-1",
     }
   ];
 
@@ -58,7 +65,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)] lg:grid-rows-[repeat(3,minmax(200px,auto))]">
           {servicesData.map((service, index) => (
             <motion.div
               key={index}
